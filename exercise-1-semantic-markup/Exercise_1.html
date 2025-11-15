@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cooking with Andy!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ADDITIONAL TECHNIQUE: Google Fonts added for improved typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif; /* Using Google Font */
+            background: #fafafa;
+            color: #333;
+            
+            /* ADDITIONAL TECHNIQUE: Smooth scrolling when clicking links */
+            scroll-behavior: smooth;
+        }
+
+        /* Header styling */
+        header {
+            background: #e5e5e5;
+            padding: 20px 30px;
+            
+            /* ADDITIONAL TECHNIQUE: Responsive flex layout */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        header h1 {
+            font-family: "Playfair Display", serif; /* Decorative title font */
+            font-size: 36px;
+            margin: 0 0 10px 0;
+        }
+
+        /* ADDITIONAL TECHNIQUE: Navigation hover effects */
+        nav a {
+            margin-right: 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #444;
+            text-decoration: underline;
+        }
+
+        /* ADDITIONAL TECHNIQUE: Card-style container with shadow */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+
+            /* Shadow effect to enhance design */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2, h3 {
+            font-family: "Playfair Display", serif; /* Using Google Font */
+        }
+
+        /* ADDITIONAL TECHNIQUE: Collapsible section button */
+        .collapsible {
+            background: #ececec;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Content hidden until expanded */
+        .content {
+            display: none; /* Collapsible functionality */
+            padding: 10px 20px;
+        }
+
+        /* Note box with styled design */
+        .note-box {
+            background: #f3f3f3;
+            border-left: 4px solid #888;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+
+        /* Footer */
+        footer {
+            background: #e5e5e5;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        /* ADDITIONAL TECHNIQUE: Back to top button */
+        #topBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            padding: 12px 16px;
+            background: black;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            display: none; /* Hidden until scrolled */
+            font-size: 14px;
+        }
+
+        #topBtn:hover {
+            background: #333;
+        }
+
+        /* ADDITIONAL TECHNIQUE: Responsive design for mobile screens */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+            nav a {
+                font-size: 16px;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Cooking with Andy!</h1>
+
+    <!-- Simple nav -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#blog">Blog</a>
+        <a href="#browse">Browse</a>
+    </nav>
+</header>
+
+<div class="container" id="home">
+    <h2>Chocolate Chip Cookies</h2>
+    <p>Delicious homemade cookies with gooey chocolate chips!</p>
+
+    <!-- ADDITIONAL TECHNIQUE: Collapsible Ingredients Section -->
+    <div class="collapsible">Ingredients ⮟</div>
+
+    <div class="content">
+        <ul>
+            <li>2 1/4 cups flour</li>
+            <li>1/2 teaspoon baking soda</li>
+            <li>1 cup unsalted butter, softened</li>
+            <li>1/2 cup granulated sugar</li>
+            <li>1 cup packed brown sugar</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>2 large eggs</li>
+            <li>2 cups semisweet chocolate chips</li>
+        </ul>
+    </div>
+
+    <div class="note-box">
+        If you don't have eggs, you can use a suitable egg substitute like applesauce, mashed bananas, or yogurt.
+        Use 1/4 cup of the substitute for each egg in the recipe.
+    </div>
+
+    <h3>Instructions</h3>
+    <ol>
+        <li>Preheat your oven to 190°C.</li>
+        <li>Mix flour and baking soda in a small bowl.</li>
+        <li>Cream butter, sugars, and vanilla.</li>
+        <li>Add eggs one at a time.</li>
+        <li>Add flour mixture gradually.</li>
+        <li>Stir in chocolate chips.</li>
+        <li>Drop tablespoons of dough onto baking sheet.</li>
+        <li>Bake 8–10 mins until golden.</li>
+        <li>Cool before serving.</li>
+    </ol>
+</div>
+
+<footer>
+    Cooking With Andy © 2024
+</footer>
+
+<!-- ADDITIONAL TECHNIQUE: Back to Top Button -->
+<div id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    Back to Top
+</div>
+
+<script>
+    /* ADDITIONAL TECHNIQUE: JavaScript Collapsible Section */
+    const coll = document.querySelector(".collapsible");
+    const content = document.querySelector(".content");
+
+    coll.addEventListener("click", () => {
+        // Toggle visibility
+        content.style.display = content.style.display === "block" ? "none" : "block";
+
+        // Update label arrow
+        coll.textContent = content.style.display === "block"
+            ? "Ingredients ⮝"
+            : "Ingredients ⮟";
+    });
+
+    /* ADDITIONAL TECHNIQUE: Scroll-triggered Back-to-Top Button */
+    window.addEventListener("scroll", () => {
+        document.getElementById("topBtn").style.display =
+            window.scrollY > 200 ? "block" : "none";
+    });
+</script>
+
+</body>
+</html>
