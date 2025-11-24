@@ -1,133 +1,133 @@
-<!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>J's Gallery</title>
+<!DOCTYPE html> <!-- tells the browser this is an HTML5 document -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes the page scale nicely on phones -->
+<title>J's Gallery</title> <!-- title that shows up in the browser tab -->
 
 <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-        font-size: 20px;
+        font-family: Arial, sans-serif; /* picking a simple font */
+        margin: 10px; /* small margin around the page */
+        padding: 10px; /* small padding inside the body */
+        box-sizing: border-box; /* helps keep layout sizing consistent */
+        font-size: 20px; /* base text size */
     }
 
     h1 {
-        font-size: 100px;
+        font-size: 100px; /* making the main heading really big */
     }
 
     p {
-        font-size: 40px;
-        line-height: 1.4;
+        font-size: 40px; /* making paragraph text big */
+        line-height: 1.4; /* a bit of spacing between lines */
     }
 
     .nav a {
-        font-size: 40px;
-        margin: 0 50px;
-        text-decoration: underline;
-        color: blue;
+        font-size: 40px; /* make nav links big */
+        margin: 0 50px; /* space between each link */
+        text-decoration: underline; /* underline so it looks like a link */
+        color: blue; /* making links blue */
     }
 
     .header {
-        text-align: center;
-        padding: 80px;
+        text-align: center; /* center the header text */
+        padding: 80px; /* big spacing around the header */
     }
 
     .nav {
-        text-align: center;
-        margin-bottom: 20px;
+        text-align: center; /* center the nav links */
+        margin-bottom: 20px; /* little gap under the nav */
     }
 
     /* ----------------------------
        Text with image floated right
     ----------------------------- */
     .text-block {
-        font-size: 40px;
-        line-height: 1.4;
-        margin-bottom: 40px; /* spacing before gallery rows */
+        font-size: 40px; /* bigger text for this section */
+        line-height: 1.4; /* readable spacing */
+        margin-bottom: 40px; /* space before the gallery rows start */
     }
 
     .float-image {
-        width: 50%;
-        float: right;
-        margin: 0 0 20px 20px; /* text spacing around image */
+        width: 50%; /* image takes half the width */
+        float: right; /* push the image to the right side */
+        margin: 0 0 20px 20px; /* space so text doesn’t sit on top of the image */
     }
 
     /* ----------------------------
        3-row media layout with fixed height
     ----------------------------- */
     .row {
-        display: flex;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 400px; /* fixed row height */
+        display: flex; /* puts items side-by-side */
+        width: 100%; /* full width row */
+        margin: 0; /* no margin */
+        padding: 0; /* no padding */
+        height: 400px; /* all rows are the same height */
     }
 
     .row > * {
-        margin: 0;
-        padding: 0;
-        display: block;
-        height: 100%;
+        margin: 0; /* remove margin */
+        padding: 0; /* remove padding */
+        display: block; /* make items act like blocks */
+        height: 100%; /* fill up the full row height */
     }
 
     .w60 {
-        width: 60%;
+        width: 60%; /* element takes 60% of the row */
     }
 
     .w40 {
-        width: 40%;
+        width: 40%; /* element takes 40% of the row */
     }
 
     video, img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
+        width: 100%; /* stretch to fit container */
+        height: 100%; /* fill up vertically too */
+        object-fit: cover; /* crops nicely instead of stretching weirdly */
+        display: block; /* gets rid of tiny gaps some browsers add */
     }
 
 </style>
 </head>
-<body>
+<body> <!-- main content area -->
 
-<div class="header">
-    <h1>J's Gallery</h1>
+<div class="header"> <!-- top header section -->
+    <h1>J's Gallery</h1> <!-- big heading -->
 </div>
 
-<div class="nav">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Gallery</a>
+<div class="nav"> <!-- navigation bar -->
+    <a href="#">Home</a> <!-- nav link -->
+    <a href="#">About</a> <!-- nav link -->
+    <a href="#">Gallery</a> <!-- nav link -->
 </div>
 
 <!-- Text with image floated right -->
-<div class="text-block">
-    <img class="float-image" src="C:\Users\sidor\OneDrive\Desktop\img\COW.jpg" alt="Cow">
+<div class="text-block"> <!-- block of text that wraps around an image -->
+    <img class="float-image" src="img\COW.jpg" alt="Cow"> <!-- picture on the right side -->
 
-    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent mollis adipiscing per id libero libero. Tempus pretium netus molestie scelerisque facilisis tristique volutpat ultricies. Nostra ligula ac pulvinar rutrum non rhoncus mauris facilisi. Quisque maximus commodo sollicitudin, montes congue imperdiet. Est malesuada vivamus vestibulum ante aenean class. Per integer aptent ullamcorper sagittis posuere dignissim morbi scelerisque. Fringilla primis sagittis lorem erat integer; vulputate nullam. Porta purus habitant id fermentum nec ex, proin mauris sem.</p>
+    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent mollis adipiscing per id libero libero. Tempus pretium netus molestie scelerisque facilisis tristique volutpat ultricies. Nostra ligula ac pulvinar rutrum non rhoncus mauris facilisi. Quisque maximus commodo sollicitudin, montes congue imperdiet. Est malesuada vivamus vestibulum ante aenean class. Per integer aptent ullamcorper sagittis posuere dignissim morbi scelerisque. Fringilla primis sagittis lorem erat integer; vulputate nullam. Porta purus habitant id fermentum nec ex, proin mauris sem.</p> <!-- first paragraph -->
 
-    <p>Lectus ultrices nibh lobortis tempus facilisis sit conubia taciti. Non torquent amet nibh elit ante fermentum praesent cras. Et suspendisse egestas eros erat aptent sollicitudin. Nulla tortor purus posuere auctor himenaeos malesuada. Turpis phasellus enim venenatis aliquam pellentesque senectus, id ultrices. Praesent tellus consequat phasellus cubilia mattis mauris natoque litora. Fringilla cursus montes inceptos nec venenatis platea.</p>
+    <p>Lectus ultrices nibh lobortis tempus facilisis sit conubia taciti. Non torquent amet nibh elit ante fermentum praesent cras. Et suspendisse egestas eros erat aptent sollicitudin. Nulla tortor purus posuere auctor himenaeos malesuada. Turpis phasellus enim venenatis aliquam pellentesque senectus, id ultrices. Praesent tellus consequat phasellus cubilia mattis mauris natoque litora. Fringilla cursus montes inceptos nec venenatis platea.</p> <!-- second paragraph -->
 </div>
 
 <!-- Row 1 -->
-<div class="row">
-    <video class="w60" controls>
-        <source src="C:\Users\sidor\OneDrive\Desktop\img\video.mp4" type="video/mp4">
+<div class="row"> <!-- first media row -->
+    <video class="w60" controls> <!-- video takes 60% -->
+        <source src="img\video.mp4" type="video/mp4"> <!-- video file -->
     </video>
 
-    <img class="w40" src="C:\Users\sidor\OneDrive\Desktop\img\img4598.jpg" alt="">
+    <img class="w40" src="img\img4598.jpg" alt=""> <!-- image takes 40% -->
 </div>
 
 <!-- Row 2 -->
-<div class="row">
-    <img class="w40" src="C:\Users\sidor\OneDrive\Desktop\img\img4532.jpg" alt="">
-    <img class="w60" src="C:\Users\sidor\OneDrive\Desktop\img\johns car jpg.jpg" alt="">
+<div class="row"> <!-- second media row -->
+    <img class="w40" src="img\img4532.jpg" alt=""> <!-- small image -->
+    <img class="w60" src="img\johns car jpg.jpg" alt=""> <!-- bigger image -->
 </div>
 
 <!-- Row 3 -->
-<div class="row">
-    <img class="w60" src="C:\Users\sidor\OneDrive\Desktop\img\photo_2018_02_01.jpg" alt="">
-    <img class="w40" src="C:\Users\sidor\OneDrive\Desktop\img\photo_2018_02_31.jpg" alt="">
+<div class="row"> <!-- third media row -->
+    <img class="w60" src="img\photo_2018_02_01.jpg" alt=""> <!-- big image -->
+    <img class="w40" src="img\photo_2018_02_31.jpg" alt=""> <!-- small image -->
 </div>
 
 </body>
-</html>
+</html> <!-- end of the page -->

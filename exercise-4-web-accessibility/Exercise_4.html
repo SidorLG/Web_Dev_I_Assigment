@@ -1,54 +1,54 @@
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Wondering Photographer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
+<!DOCTYPE html> <!-- tells browser this is an HTML5 doc -->
+<html lang="en"> <!-- sets the language to English -->
+<head> <!-- head holds info about the page, not shown on screen -->
+    <meta charset="UTF-8"> <!-- makes sure text displays properly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- helps page look good on phones -->
+    <title>The Wondering Photographer</title> <!-- page title shown on browser tab -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> <!-- loads Google fonts -->
+    <style> <!-- starts CSS styling section -->
         /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { /* selects all elements */
+            margin: 0; /* removes default spacing */
+            padding: 0; /* removes default padding */
+            box-sizing: border-box; /* makes sizing easier to control */
         }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #fff;
-            background-color: #2b2b2b;
+        body { /* styles the whole page */
+            font-family: 'Roboto', sans-serif; /* sets main font */
+            line-height: 1.6; /* gives text breathing room */
+            color: #fff; /* sets text color to white */
+            background-color: #2b2b2b; /* dark grey background */
         }
 
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        header { /* styles the top section */
+            background-color: #1a1a1a; /* darker background */
+            color: #fff; /* white text */
+            padding: 1rem 2rem; /* spacing inside header */
+            display: flex; /* puts items in a row */
+            justify-content: space-between; /* spreads items apart */
+            align-items: center; /* lines items up in the middle */
         }
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        .header-left { /* groups title + logo */
+            display: flex; /* lays them next to each other */
+            align-items: center; /* centers them vertically */
+            gap: 1rem; /* adds space between them */
         }
 
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin: 0;
+        header h1 { /* styles the site title */
+            font-family: 'Playfair Display', serif; /* fancy font */
+            font-size: 2rem; /* makes text bigger */
+            margin: 0; /* no extra spacing */
         }
 
-        .header-image {
-            height: 50px;
-            width: auto;
+        .header-image { /* styles the little divider image */
+            height: 50px; /* sets its height */
+            width: auto; /* keeps the proportions correct */
         }
 
-        .top-nav {
-            display: flex;
-            gap: 1rem;
+        .top-nav { /* styles the top navigation links */
+            display: flex; /* puts buttons side by side */
+            gap: 1rem; /* spacing between them */
         }
 
         /* ------------------------------------- */
@@ -57,136 +57,136 @@
 
         .nav-button,
         nav a.shopping-cart,
-        button {
-            background: linear-gradient(135deg, #d4af37, #fceabb, #d4af37);
-            color: #1a1a1a;
-            padding: 0.6rem 1.2rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 700;
-            border: 2px solid #b98c1d;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        button { /* styles all the gold buttons */
+            background: linear-gradient(135deg, #d4af37, #fceabb, #d4af37); /* shiny gold look */
+            color: #1a1a1a; /* dark text */
+            padding: 0.6rem 1.2rem; /* button size */
+            text-decoration: none; /* removes underline */
+            border-radius: 8px; /* rounded corners */
+            font-weight: 700; /* bold text */
+            border: 2px solid #b98c1d; /* gold border */
+            cursor: pointer; /* mouse turns to pointer */
+            transition: all 0.3s ease; /* smooth hover animation */
             box-shadow:
-                0 0 10px rgba(255, 215, 0, 0.4),
-                inset 0 0 5px rgba(255,255,255,0.6),
-                inset 0 -4px 6px rgba(0,0,0,0.3);
+                0 0 10px rgba(255, 215, 0, 0.4), /* outer glow */
+                inset 0 0 5px rgba(255,255,255,0.6), /* inside shine */
+                inset 0 -4px 6px rgba(0,0,0,0.3); /* bottom shadow */
         }
 
         .nav-button:hover,
         nav a.shopping-cart:hover,
-        button:hover {
-            background: linear-gradient(135deg, #f8e39a, #fff4c2, #f8d772);
+        button:hover { /* hover effect */
+            background: linear-gradient(135deg, #f8e39a, #fff4c2, #f8d772); /* lighter gold */
             box-shadow:
-                0 0 15px rgba(255, 235, 150, 0.8),
-                inset 0 0 8px rgba(255,255,255,0.9),
-                inset 0 -4px 6px rgba(0,0,0,0.4);
-            transform: translateY(-2px);
+                0 0 15px rgba(255, 235, 150, 0.8), /* brighter glow */
+                inset 0 0 8px rgba(255,255,255,0.9), /* more shine */
+                inset 0 -4px 6px rgba(0,0,0,0.4); /* shadow */
+            transform: translateY(-2px); /* lifts button slightly */
         }
 
         .nav-button:active,
         nav a.shopping-cart:active,
-        button:active {
-            transform: translateY(1px);
+        button:active { /* pressed button effect */
+            transform: translateY(1px); /* pushes down */
             box-shadow:
-                0 0 8px rgba(255, 215, 0, 0.6),
-                inset 0 0 4px rgba(255,255,255,0.5),
-                inset 0 -3px 4px rgba(0,0,0,0.4);
+                0 0 8px rgba(255, 215, 0, 0.6), /* smaller glow */
+                inset 0 0 4px rgba(255,255,255,0.5), /* small shine */
+                inset 0 -3px 4px rgba(0,0,0,0.4); /* inner shadow */
         }
 
         /* ------------------------------------- */
 
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
+        main { /* main content area */
+            max-width: 1200px; /* keeps content centered */
+            margin: 2rem auto; /* adds space above/below */
+            padding: 0 2rem; /* left and right spacing */
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+        .gallery { /* photo grid */
+            display: grid; /* makes a grid layout */
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 2rem; /* space between pictures */
         }
 
-        figure {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 40px rgba(255, 3, 192, 0.26);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        figure { /* photo card */
+            background: #fff; /* white background */
+            border-radius: 10px; /* rounded corners */
+            overflow: hidden; /* hides overflow */
+            box-shadow: 0 8px 40px rgba(255, 3, 192, 0.26); /* fancy shadow */
+            display: flex; /* stacks items vertically */
+            flex-direction: column; /* ensures top-to-bottom layout */
+            align-items: center; /* centers items */
         }
 
-        figure img {
-            width: 100%;
-            height: auto;
+        figure img { /* images in gallery */
+            width: 100%; /* full width */
+            height: auto; /* keeps proportions */
         }
 
-        figcaption {
-            padding: 1rem;
-            flex-grow: 1;
-            text-align: center;
-            color: #333;
+        figcaption { /* text under images */
+            padding: 1rem; /* spacing */
+            flex-grow: 1; /* pushes button down */
+            text-align: center; /* centers text */
+            color: #333; /* dark text */
         }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #1a1a1a;
-            color: #fff;
-            margin-top: 4rem;
+        footer { /* bottom section */
+            text-align: center; /* centers text */
+            padding: 2rem; /* spacing */
+            background-color: #1a1a1a; /* dark background */
+            color: #fff; /* white text */
+            margin-top: 4rem; /* space above footer */
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="header-left">
-            <h1>The Wondering Photographer</h1>
-            <img src="C:\Users\sidor\OneDrive\Desktop\img\TheDivider.png" alt="Logo" class="header-image" />
+<body> <!-- main part of the webpage -->
+    <header> <!-- top header bar -->
+        <div class="header-left"> <!-- wraps title + image -->
+            <h1>The Wondering Photographer</h1> <!-- site name -->
+            <img src="img\TheDivider.png" alt="Logo" class="header-image" /> <!-- divider image -->
         </div>
 
-        <nav class="top-nav">
-            <a href="#" class="nav-button">HOME</a>
-            <a href="#" class="nav-button">BLOG</a>
-            <a href="#" class="nav-button">ABOUT ME</a>
+        <nav class="top-nav"> <!-- main navigation links -->
+            <a href="#" class="nav-button">HOME</a> <!-- home link -->
+            <a href="#" class="nav-button">BLOG</a> <!-- blog link -->
+            <a href="#" class="nav-button">ABOUT ME</a> <!-- about me link -->
         </nav>
 
-        <nav>
-            <a href="#" class="shopping-cart" aria-label="Go to shopping cart">🛒 Cart</a>
+        <nav> <!-- cart navigation -->
+            <a href="#" class="shopping-cart" aria-label="Go to shopping cart">🛒 Cart</a> <!-- cart link -->
         </nav>
     </header>
 
-    <main>
-        <section class="gallery" aria-label="Travel Photography Gallery">
-            <figure>
-                <img src="C:\Users\sidor\OneDrive\Desktop\img\OceanPhoto.jpg" alt="Coastal scene in Greenland with family, cold water" />
-                <figcaption>This was from a fabulous trip to the coast of Greenland with my family. The water was lovely—but very cold!</figcaption>
-                <button>Add to Basket</button>
+    <main> <!-- main area of page content -->
+        <section class="gallery" aria-label="Travel Photography Gallery"> <!-- photo gallery section -->
+            <figure> <!-- first photo item -->
+                <img src="img\OceanPhoto.jpg" alt="Coastal scene in Greenland with family, cold water" /> <!-- ocean photo -->
+                <figcaption>This was from a fabulous trip to the coast of Greenland with my family. The water was lovely—but very cold!</figcaption> <!-- text under photo -->
+                <button>Add to Basket</button> <!-- add to cart button -->
             </figure>
 
-            <figure>
-                <img src="C:\Users\sidor\OneDrive\Desktop\img\BridgePhoto.jpg" alt="Golden Gate Bridge in San Francisco" />
-                <figcaption>A picture of the Golden Gate Bridge. New York! New York!</figcaption>
-                <button>Add to Basket</button>
+            <figure> <!-- second photo -->
+                <img src="img\BridgePhoto.jpg" alt="Golden Gate Bridge in San Francisco" /> <!-- bridge photo -->
+                <figcaption>A picture of the Golden Gate Bridge. New York! New York!</figcaption> <!-- caption text -->
+                <button>Add to Basket</button> <!-- button -->
             </figure>
 
-            <figure>
-                <img src="C:\Users\sidor\OneDrive\Desktop\img\ValleyPhoto.jpg" alt="River valley in Greenland where a glacier used to be" />
-                <figcaption>Another great photo from Greenland. It's a river valley where a glacier used to be.</figcaption>
-                <button>Add to Basket</button>
+            <figure> <!-- third photo -->
+                <img src="img\ValleyPhoto.jpg" alt="River valley in Greenland where a glacier used to be" /> <!-- valley photo -->
+                <figcaption>Another great photo from Greenland. It's a river valley where a glacier used to be.</figcaption> <!-- caption -->
+                <button>Add to Basket</button> <!-- button -->
             </figure>
 
-            <figure>
-                <img src="C:\Users\sidor\OneDrive\Desktop\img\WaterfallPhoto.jpg" alt="Waterfall surrounded by forest" />
-                <figcaption>The waterfall made such a lovely sound. I could have fallen asleep!</figcaption>
-                <button>Add to Basket</button>
+            <figure> <!-- fourth photo -->
+                <img src="img\WaterfallPhoto.jpg" alt="Waterfall surrounded by forest" /> <!-- waterfall photo -->
+                <figcaption>The waterfall made such a lovely sound. I could have fallen asleep!</figcaption> <!-- caption -->
+                <button>Add to Basket</button> <!-- button -->
             </figure>
         </section>
     </main>
 
-    <footer>
-        <p>Copyright &copy; The Wondering Photographer 2018</p>
+    <footer> <!-- footer section -->
+        <p>Copyright © The Wondering Photographer 2018</p> <!-- copyright text -->
     </footer>
 </body>
 </html>
